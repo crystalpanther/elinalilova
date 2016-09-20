@@ -1,0 +1,73 @@
+html, body {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+}
+@color-green: #092d43;
+@color-blue: #00C5C7;
+@green: #0d483b;
+@color-pink: #de0154;
+@deep-green: #09293e;
+@green-blue: #1b5f60;
+@deep-blue: #000d15;
+@main-color-color: #71d0fc;
+@main-color-grey: rgba(0, 0, 0, 0.5);
+//переменные слик слайдера
+@slick-dot-character: "•";
+@slick-font-family: "slick";
+@slick-opacity-not-active: 0.25;
+@slick-dot-color: black;
+@slick-dot-color-active: @slick-dot-color;
+@slick-opacity-default: 0.75;
+#letter-fst {
+  color: @main-color-color;
+  font-size: 32px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+}
+* {
+    outline: none;
+}
+a {
+    text-decoration: none;
+    &:link {
+        color: inherit;
+    }
+    &:alink {
+        color: inherit;
+    }
+}
+h1, h2, h3, h4, h5, h6, ul, li, p, span, a, div {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#title {
+    font-size: 25px;
+}
+.box-wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0px 15px;
+    position: relative;
+    margin: 0 auto 60px;
+    padding: 0;
+    touch-action: pan-y;
+}
+.row {
+    &:before {
+        display: table;
+        content: " ";
+        }
+    &:after {
+        display: table;
+        content: " ";
+        }
+}

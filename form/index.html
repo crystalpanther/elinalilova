@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Форма обратной связи</title>
+    <!-- scripts for styles -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="https://use.fontawesome.com/948142a9de.js"></script>
+
+    <!-- links for styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="preload" id="p_prldr">
+         <div class="preload-square" id="preloader">
+         	<div class="circle"></div>
+     	    <div class="out"></div>
+             <div class="middle"></div>
+             <div class="in"></div>
+         </div>
+     </div>
+    <div class="cover"></div>
+    <div class="cover"></div>
+    <section class="head">
+        <div class="topbar"></div>
+            <div class="wrapper-menu">
+                <div class="row-12 menu">
+                    <ul>
+                        <li class="desktop"><a href="../index.html">home</a></li>
+                        <li class="desktop"><a href="../works/index.html">works</a></li>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="topbar-mobile">
+                <span class="fa fa-bars" aria-hidden="true"></span>
+            </div>
+            <div class="mobile-menu">
+                <div class="menu-m">
+                    <ul>
+                        <li class="desktop-m"><a href=""><span class="fa fa-times" aria-hidden="true"></span></a></li>
+                        <li class="desktop-m"><a href="../index.html">home</a></li>
+                        <li class="desktop-m"><a href="../works/index.html">works</a></li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+    <form action="javascript:void(0x)" id="msgForm" onsubmit="sendMail()">
+        <div class="form-container">
+            <div class="container">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input class="field" id="name" type="text" placeholder="Name" name="name"required="">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input class="field" id="email" type="text" placeholder="Email" name="email" required="">
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="msg" required=""></textarea></p>
+                </div>
+            </div>
+            <footer>
+                <button class="btn send">Send</button>
+            </footer>
+        </div>
+    </form>
+    <!-- main scripts here -->
+
+    <script type="text/javascript">
+        function sendMail() {
+            var msg = $('#msgForm').serialize();
+            $.ajax({
+                type: 'POST',
+                url: 'sendmail.php',
+                data: msg,
+                success: function() {
+                    $('form-container').html({
+                        $(this).text(great);
+                    });
+                },
+                error: function() {
+                    $(this).text(wrong+62);
+                }
+            })
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/preloader.js"></script>
+</body>
+</html>
