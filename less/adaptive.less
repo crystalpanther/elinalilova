@@ -1,0 +1,159 @@
+@media (max-width: 900px) {
+    .head {
+        .desktop {
+            display: none;
+        }
+        .topbar-mobile {
+            display: block !important;
+        }
+        .tools {
+            display: inline-block;
+            width: 100vw;
+            text-align: center;
+        }
+        .menu {
+            display: none !important;
+        }
+    }
+    .aboutme-container {
+        height: 40vh !important;
+    }
+    .social-media {
+        position: relative;
+        top: 140% !important;
+        transform: translate(-50%, -140%) !important;
+        left: 50% !important;
+        display: table;
+        &:after {
+            display: table;
+            content: '';
+            clear: both;
+        }
+        & > ul {
+            position: relative;
+            &:before {
+                display: block;
+                content: '';
+                width: 100%;
+                background-color: #fff !important;
+                height: 4px;
+                margin-bottom: 8px;
+            }
+            & > li {
+                margin: 0 20px;
+                cursor: pointer;
+                float: right;
+                box-sizing: border-box;
+                &:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                & > a {
+                    & > span {
+                        color: #fff !important;
+                        font-size: 4vh;
+                        transition: all 500ms linear;
+                        &:hover {
+                            color: #000;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 330px) {
+    .aboutme-container {
+        height: 50vh !important;
+    }
+    .social-media {
+        position: relative;
+        top: 130% !important;
+        transform: translate(0%, -130%) !important;
+        left: -10% !important;
+        display: table;
+        &:after {
+            display: table;
+            content: '';
+            clear: both;
+        }
+        & > ul {
+            position: relative;
+            &:before {
+                display: block;
+                content: '';
+                width: 100%;
+                background-color: #fff !important;
+                height: 4px;
+                margin-bottom: 8px;
+            }
+            & > li {
+                margin: 0 15px !important;
+                cursor: pointer;
+                float: right;
+                box-sizing: border-box;
+                &:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                & > a {
+                    & > span {
+                        color: #fff !important;
+                        font-size: 3.5vh !important;
+                        transition: all 500ms linear;
+                        &:hover {
+                            color: #000;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 275px) {
+    .aboutme-container {
+        height: 50vh !important;
+    }
+    .social-media {
+        top: 130% !important;
+        transform: translate(0%, -130%) !important;
+        left: -10% !important;
+        & > ul {
+            position: relative;
+            &:before {
+                display: block;
+                content: '';
+                width: 100%;
+                background-color: #fff !important;
+                height: 4px;
+                margin-bottom: 8px;
+            }
+            & > li {
+                margin: 0 10px !important;
+                & > a {
+                    & > span {
+                        color: #fff !important;
+                        font-size: 3.5vh !important;
+                        transition: all 500ms linear;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-height: 613px) {
+    .header {
+        .menu {
+            background: @color-green !important;
+            width: 120vw !important;
+            padding: 30px 100px 40px!important;
+            box-sizing: border-box !important;
+            top: 0 !important;
+            right: -20px !important;
+        }
+    }
+}
